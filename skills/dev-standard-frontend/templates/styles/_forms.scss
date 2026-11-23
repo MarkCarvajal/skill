@@ -1,0 +1,24 @@
+// Controles de formulario: única definición, basada en tokens.
+.field {
+  background: var(--app-color-surface);
+  border: 1px solid var(--app-color-border);
+  border-radius: 0.5rem;
+  color: var(--app-color-text);
+  font-size: max(16px, 1rem);
+  min-height: var(--app-touch-target);
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+
+  &:focus-visible {
+    outline: 2px solid var(--app-color-primary);
+    outline-offset: 2px;
+  }
+
+  &.field-invalid {
+    border-color: var(--app-color-danger);
+  }
+}
+
+textarea.field {
+  resize: vertical;
+}

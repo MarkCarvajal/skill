@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+/* Conecta Tailwind con los tokens de src/styles/_tokens.scss.
+   Los breakpoints replican src/styles/_breakpoints.scss (única fuente). */
+@theme inline {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-primary: var(--app-color-primary);
+  --color-secondary: var(--app-color-secondary);
+  --color-success: var(--app-color-success);
+  --color-warning: var(--app-color-warning);
+  --color-danger: var(--app-color-danger);
+  --color-surface: var(--app-color-surface);
+  --color-surface-alt: var(--app-color-surface-alt);
+  --color-text: var(--app-color-text);
+  --color-muted: var(--app-color-muted);
+  --color-border: var(--app-color-border);
+
+  --font-sans: var(--app-font-sans);
+  --font-mono: var(--app-font-mono);
+
+  --spacing-gutter: var(--app-space-gutter);
+  --spacing-touch: var(--app-touch-target);
+
+  --text-title: var(--app-text-3xl);
+}

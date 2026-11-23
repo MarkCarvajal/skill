@@ -1,0 +1,26 @@
+// Familias, tamaños y pesos. Tamaños base pensados mobile-first; los títulos escalan en md+.
+$font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+$font-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+$font-sizes: (
+  'xs': 0.75rem,
+  'sm': 0.875rem,
+  'base': 1rem,
+  'lg': 1.125rem,
+  'xl': 1.25rem,
+  '2xl': 1.5rem,
+  '3xl': 1.875rem,
+);
+
+$font-sizes-md: (
+  '2xl': 1.75rem,
+  '3xl': 2.25rem,
+);
+
+$font-weights: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+);
+
+$line-height-base: 1.5;

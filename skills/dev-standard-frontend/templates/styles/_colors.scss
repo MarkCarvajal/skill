@@ -1,0 +1,24 @@
+// Paleta y colores semánticos. Los componentes usan solo los nombres semánticos.
+$palette: (
+  'primary': #2563eb,
+  'secondary': #7c3aed,
+  'success': #16a34a,
+  'warning': #f59e0b,
+  'danger': #dc2626,
+  'surface': #ffffff,
+  'surface-alt': #f3f4f6,
+  'text': #111827,
+  'muted': #6b7280,
+  'border': #e5e7eb,
+);
+
+$palette-dark: (
+  'surface': #111827,
+  'surface-alt': #1f2937,
+  'text': #f9fafb,
+  'muted': #9ca3af,
+  'border': #374151,
+);
+
+// Serie de colores para gráficos ECharts
+$chart-colors: #2563eb, #7c3aed, #16a34a, #f59e0b, #dc2626, #0891b2, #db2777;

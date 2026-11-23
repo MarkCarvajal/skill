@@ -1,0 +1,29 @@
+// Botones: única definición, basada en tokens. Objetivo táctil mínimo en móvil.
+.btn {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 500;
+  justify-content: center;
+  min-height: var(--app-touch-target);
+  min-width: var(--app-touch-target);
+  padding: 0.5rem 1rem;
+
+  &:focus-visible {
+    outline: 2px solid var(--app-color-primary);
+    outline-offset: 2px;
+  }
+}
+
+.btn-primary {
+  background: var(--app-color-primary);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--app-color-border);
+  color: var(--app-color-danger);
+}

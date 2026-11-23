@@ -1,0 +1,22 @@
+@use 'tokens';
+@use 'forms';
+@use 'buttons';
+
+html {
+  font-family: var(--app-font-sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--app-color-surface);
+  color: var(--app-color-text);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}

@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use 'breakpoints' as bp;
+@use 'colors';
+@use 'fonts';
+@use 'spacing';
+
+// Emite los tokens como CSS custom properties; Tailwind los consume vía @theme inline.
+:root {
+  @each $name, $value in colors.$palette {
+    --app-color-#{$name}: #{$value};
+  }
+
+  @each $name, $value in fonts.$font-sizes {
+    --app-text-#{$name}: #{$value};
+  }
+
+  @each $name, $value in spacing.$space-scale {
+    --app-space-#{$name}: #{$value};
+  }
+
+  --app-font-sans: #{fonts.$font-sans};
+  --app-font-mono: #{fonts.$font-mono};
+  --app-space-gutter: #{map.get(spacing.$gutters, 'base')};
+  --app-touch-target: #{spacing.$touch-target};
+
+  @include bp.up('md') {
+    --app-space-gutter: #{map.get(spacing.$gutters, 'md')};
+
+    @each $name, $value in fonts.$font-sizes-md {
+      --app-text-#{$name}: #{$value};
+    }
+  }
+
+  @include bp.up('lg') {
+    --app-space-gutter: #{map.get(spacing.$gutters, 'lg')};
+  }
+}
+
+:root.dark {
+  @each $name, $value in colors.$palette-dark {
+    --app-color-#{$name}: #{$value};
+  }
+}
