@@ -7,7 +7,7 @@ Skill de desarrollo frontend (Angular, signals, Tailwind, ECharts): estructura p
 Con la CLI de skills:
 
 ```
-npx skills add https://github.com/<usuario>/<repo>
+npx skills add https://github.com/MarkCarvajal/skill
 ```
 
 Manual (GitHub Copilot / Claude Code): copiar `skills/dev-standard-frontend/` a una de estas carpetas:
