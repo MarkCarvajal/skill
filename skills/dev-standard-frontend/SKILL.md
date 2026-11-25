@@ -31,7 +31,7 @@ Seguir el flujo cerca de la tarea (ruta → componente → servicio → contrato
 
 Cualquier entregable (pantalla, feature, app) sigue tres fases con aprobación de Marcos entre cada una; detalle en [references/flujo-mvp.md](references/flujo-mvp.md):
 
-1. **Planificar** con la skill `writing-plans` de Superpowers (siempre), incluyendo la **maqueta de pantallas en Claude Design** aprobada antes de codificar.
+1. **Planificar** con la skill `writing-plans` de Superpowers (siempre), incluyendo la **maqueta de pantallas en Claude Design** aprobada antes de codificar cuando se incorpora algo nuevo (card, pantalla, landing); los cambios menores (texto, espaciado, iconos) se aplican directo, sin maqueta.
 2. **Construir y afinar en local** en ida y vuelta: mostrar el resultado, recibir correcciones, repetir. **Sin pruebas unitarias ni e2e en esta fase.**
 3. **Pruebas** (unitarias + e2e) solo cuando Marcos diga que el MVP está listo.
 

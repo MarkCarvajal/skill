@@ -22,7 +22,9 @@ Todo entregable se planifica con la skill **`writing-plans` del plugin Superpowe
 
 ### 1.2 Maqueta con Claude Design (antes de codificar)
 
-Las pantallas se elaboran **primero** en Claude Design, con Marcos iterando sobre ellas, y solo se codifica cuando la maqueta está aprobada.
+**Cuándo se necesita maqueta.** Solo cuando se incorpora algo **nuevo**: una card, un componente nuevo, una pantalla, una landing completa. **Los cambios menores no pasan por Claude Design**: ajustar un texto, un espaciado, un icono, un color o un tamaño de algo que ya existe se aplica directamente. Si hay duda de si un cambio es menor o nuevo, preguntar a Marcos.
+
+Cuando sí hace falta, las pantallas se elaboran **primero** en Claude Design, con Marcos iterando sobre ellas, y solo se codifica cuando la maqueta está aprobada.
 
 1. Proponer las pantallas y estados necesarios (vacío, carga, error, móvil y escritorio) y elaborarlas en Claude Design.
 2. Iterar con Marcos hasta que apruebe. Sin aprobación explícita de la maqueta no se escribe código de UI.
