@@ -2,7 +2,7 @@
 
 **Reparto de roles.** `dev-standard` define la **estructura**: dónde vive cada cosa, cómo se nombran los archivos, el orden de los miembros, la centralización y la Regla 0. Esta guía define el **motor de modernidad**: qué técnica, API o semántica actual usar *dentro* de esa estructura. La modernidad se adapta a la estructura de Marcos; nunca al revés.
 
-Marcos está a favor de la evolución y de estar al día con lo que mejora rendimiento, accesibilidad y mantenimiento. Lo que la skill nombra (signals, `rxResource`, Reactive Forms, Karma…) son **ejemplos de base**, no una lista cerrada: usar eso o lo más moderno que lo reemplace en la versión del proyecto.
+Marcos está a favor de la evolución y de estar al día con lo que mejora rendimiento, accesibilidad y mantenimiento. Lo que la skill nombra (signals, `rxResource`, Reactive Forms…) son **ejemplos de base**, no una lista cerrada: usar eso o lo más moderno que lo reemplace en la versión del proyecto.
 
 ## 1. Orden de decisión
 
@@ -45,7 +45,7 @@ En código nuevo se aplica la técnica moderna directamente. En código existent
 
 - **Nombres de archivo:** mantener `nombre.component.ts`, `.service.ts`, etc. por claridad visual, **mientras no estén deprecados** o dejen de ser aceptados por el framework. Si el framework cambiara el valor por defecto, se sigue el esquema de Marcos y se avisa.
 - **Formularios:** usar la API de formularios más moderna y estable de la versión del proyecto; mantener la centralización de validaciones y mensajes (`FormUtils` o su equivalente moderno). Si el proyecto ya usa una, se respeta.
-- **Pruebas:** si hay runner, se usa el existente; si no hay ninguno, el más moderno soportado por esa versión. Siempre unitarias de lo nuevo y e2e del flujo afectado.
+- **Pruebas:** si hay runner, se usa el existente; si no hay ninguno, el más moderno soportado por esa versión. Sin fijar un runner en esta skill: el compatible con la versión detectada. Las unitarias y e2e se hacen tras el OK de Marcos al MVP (ver [flujo-mvp.md](flujo-mvp.md)).
 - **Versiones:** sin mínimos fijos. Primero se valida la versión y luego se usa el pack de herramientas asociado.
 
 ## 6. Dónde se aplica cada tipo de mejora

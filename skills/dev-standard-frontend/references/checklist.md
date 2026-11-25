@@ -34,7 +34,7 @@ Revisar antes de presentar código a Marcos. Cada punto es verificable.
 - [ ] Identifiqué quién consume el contrato del flujo que modifiqué y lo verifiqué desde su punto de entrada.
 - [ ] Si el cambio es de formulario/móvil: probé con teclado virtual real, o dije que solo fue emulación.
 - [ ] Ejecuté build, lint y tests existentes (o dije cuáles no pude correr).
-- [ ] Añadí unitarias de la lógica nueva y e2e del flujo afectado.
+- [ ] Las pruebas unitarias y e2e se hicieron **después** del OK de Marcos al MVP (no durante la ida y vuelta local).
 - [ ] Pedí aprobación antes de migraciones, borrados, dependencias nuevas o cambios de contrato.
 - [ ] Ante una discrepancia entre la skill y el código de la feature, pregunté en vez de decidir.
 - [ ] Probé la ruta/endpoint real, permisos y estados de error.

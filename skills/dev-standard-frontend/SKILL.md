@@ -1,6 +1,6 @@
 ---
 name: dev-standard-frontend
-description: Estándar de desarrollo frontend personal de Marcos para proyectos Angular (signals, rxjs, Tailwind, ECharts), limitada al mundo frontend y adaptada a la tecnología real de cada proyecto. Úsala siempre que se cree, modifique o revise código Angular, se genere un componente, servicio, gráfico o estilo, o se inicie un proyecto frontend nuevo. Impone reutilización obligatoria de código existente, centralización, orden de miembros de clase, responsive mobile-first y estilos centralizados en SCSS.
+description: Estándar de desarrollo frontend personal de Marcos para proyectos Angular (signals, rxjs, Tailwind, ECharts), limitada al mundo frontend y adaptada a la tecnología real de cada proyecto. Úsala siempre que se cree, modifique o revise código Angular, se genere un componente, servicio, gráfico o estilo, se planifique un MVP o entregable, o se inicie un proyecto frontend nuevo. Impone reutilización obligatoria de código existente, centralización, orden de miembros de clase, responsive mobile-first y estilos centralizados en SCSS.
 ---
 
 # Estándar de desarrollo frontend (dev-standard-frontend)
@@ -26,6 +26,14 @@ Antes de tocar nada: leer `AGENTS.md`/`CLAUDE.md`, `package.json`, el lockfile, 
 **Antes de modificar un flujo existente**, identificar quién consume su contrato (valor de formulario, acceso, respuesta HTTP, efectos de una transición de estado) y verificar desde el punto de entrada habitual las variantes afectadas. Es la regla de mayor impacto de esta skill.
 
 Seguir el flujo cerca de la tarea (ruta → componente → servicio → contrato) e implementar un cambio acotado de extremo a extremo. Si hay varias arquitecturas posibles, recomendar una con el porqué, apoyada en un ejemplo del repo.
+
+## Flujo de un entregable (MVP) — obligatorio
+
+Cualquier entregable (pantalla, feature, app) sigue tres fases con aprobación de Marcos entre cada una; detalle en [references/flujo-mvp.md](references/flujo-mvp.md):
+
+1. **Planificar** con la skill `writing-plans` de Superpowers (siempre), incluyendo la **maqueta de pantallas en Claude Design** aprobada antes de codificar.
+2. **Construir y afinar en local** en ida y vuelta: mostrar el resultado, recibir correcciones, repetir. **Sin pruebas unitarias ni e2e en esta fase.**
+3. **Pruebas** (unitarias + e2e) solo cuando Marcos diga que el MVP está listo.
 
 ## Regla 0 — Antes de escribir, buscar (OBLIGATORIA)
 
@@ -76,6 +84,7 @@ Excepción documentada: si un signal usa un inject de forma *inmediata* (p. ej. 
 
 | Tarea | Leer |
 |---|---|
+| Planificar o construir un entregable/MVP (plan, maqueta, ciclo local, pruebas) | [references/flujo-mvp.md](references/flujo-mvp.md) |
 | Frontend Angular (estructura, rutas, signals, servicios, forms) | [references/angular-frontend.md](references/angular-frontend.md) |
 | Estilos, breakpoints, tokens, responsive | [references/styles-responsive.md](references/styles-responsive.md) |
 | Cualquier gráfico | [references/echarts.md](references/echarts.md) |
@@ -105,7 +114,7 @@ Explicar qué se hará, el impacto y a quién afecta, y esperar el sí. Commits,
 
 ## Verificar antes de entregar
 
-Ejecutar compilación, lint y las pruebas existentes con los scripts del repo. **Por defecto una tarea incluye pruebas unitarias de la lógica nueva y pruebas e2e del flujo afectado**, con el runner que ya tenga el repo (si no hay, el más moderno de la versión, previa aprobación). Comprobar la ruta real y las variantes afectadas (permisos, estados de error, móvil). Al entregar decir: qué cambió, el motivo técnico, qué se reutilizó y qué comprobaciones se ejecutaron (y cuáles no se pudieron ejecutar).
+Durante la construcción solo se exige que compile y se pueda ver en local; **las pruebas unitarias y e2e se hacen únicamente después de que Marcos diga que el MVP está listo** (ver [references/flujo-mvp.md](references/flujo-mvp.md)). Con su OK: unitarias de la lógica nueva y e2e del flujo afectado (incluida la validación móvil), con el runner que ya tenga el repo o, si no hay, el recomendado y compatible con la versión de Angular detectada (sin fijar uno por costumbre; instalar dependencias requiere aprobación). Al entregar decir: qué cambió, el motivo técnico, qué se reutilizó y qué comprobaciones se ejecutaron (y cuáles no se pudieron ejecutar).
 
 ## Cómo evoluciona esta skill
 

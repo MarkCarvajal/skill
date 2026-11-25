@@ -42,7 +42,7 @@ Candidatas a automatizar sin esperar: duplicación de lógica (búsqueda de sím
 - Plantilla de entrega. (Resuelto: aprobación previa para migraciones, borrados, dependencias y cambios de contrato.)
 - Dónde se guarda el token y cómo se hace refresh; estrategia real de auth.
 - Contrato HTTP estándar (envoltorio, paginación `page/limit` o cursor, errores).
-- Cobertura mínima y runner preferido; `OnPush`, `@defer`, `track`. (Resuelto: unitarias + e2e del flujo por defecto.)
+- Cobertura mínima y runner preferido; `OnPush`, `@defer`, `track`. (Resuelto: unitarias + e2e del flujo, pero solo tras el OK de Marcos al MVP; runner según versión.)
 - Tabla estándar (PrimeNG u otra) y paginación en URL.
 - i18n, accesibilidad, SSR, modo oscuro; paleta, tipografías y breakpoints reales de sus proyectos.
 - Repo de referencia o un commit/PR aprobado (antes/después) como muestra de código que sí aprobaría.

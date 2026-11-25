@@ -144,9 +144,9 @@ Marcos ha usado PrimeNG (tema Lara Light Blue + PrimeIcons), Tailwind v4.1 con S
 
 Cuando el proveedor de identidad impone condiciones del navegador (p. ej. PingOne DaVinci depende de cookies de terceros y no funciona en incógnito), se resuelve con un **resolver específico** que bloquea el inicio del flujo y muestra el motivo, no con lógica dispersa en componentes. El guard se coloca según el flujo que realmente protege (p. ej. solo el dashboard privado), dentro de su feature.
 
-## Notas de tooling (Angular 19)
+## Notas de tooling
 
-- Karma con `@angular-devkit/build-angular:karma` necesita `@angular/platform-browser-dynamic` instalado; incluirlo en proyectos nuevos junto a `karma*`, `jasmine-core` y `@types/jasmine`.
-- E2E con Playwright: usar `channel: 'chrome'` en `playwright.config.ts` para aprovechar el Chrome instalado y evitar descargar navegadores (plantilla: [templates/angular/playwright.config.ts](../templates/angular/playwright.config.ts)). Karma: `CHROME_BIN` apuntando a Chrome si no lo detecta.
+- El runner de pruebas unitarias es el que use el proyecto o, si no hay, el recomendado y compatible con la versión de Angular detectada; no se fija uno en esta skill. Si el repo ya tiene uno, se respetan sus dependencias y configuración existentes (no se migra por iniciativa propia).
+- E2E con Playwright: usar `channel: 'chrome'` en `playwright.config.ts` para aprovechar el Chrome instalado y evitar descargar navegadores (plantilla: [templates/angular/playwright.config.ts](../templates/angular/playwright.config.ts)). Si un runner basado en navegador no detecta Chrome, apuntar `CHROME_BIN` al ejecutable instalado.
 - Persistencia en `localStorage`: siempre detrás de un `LocalStorageService` central (try/catch, valor por defecto) y un único método privado `commit()` en el servicio de la feature; validar la forma de los datos leídos (`Array.isArray`). Plantilla de campo de formulario reutilizable: [templates/angular/form-field.component.ts](../templates/angular/form-field.component.ts).
 - Tipar explícitamente genéricos con `null` en los specs (`get<Foo | null>(k, null)`), o TypeScript infiere `null`.

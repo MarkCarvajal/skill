@@ -32,7 +32,7 @@ Todas se ejecutan **en local** con `npx`; descargan paquetes la primera vez y no
 |---|---|---|---|
 | modern-web-guidance | Guías de plataforma web (CSS/HTML/JS), búsqueda offline | `npx modern-web-guidance@latest install` | Por equipo/usuario |
 | Angular CLI MCP | Buenas prácticas y docs de la versión del proyecto, `run_target`, `list_projects` | Registrar el servidor `npx -y @angular/cli mcp` en la configuración MCP de Claude Code del proyecto (`.mcp.json`), preferible `--read-only` | Por proyecto Angular |
-| Skills oficiales de Angular (`angular-developer`, `angular-new-app`) | Guía de código y creación de apps Angular 20+ | `npx skills add https://github.com/angular/skills` | Por equipo/usuario |
+| Superpowers (`writing-plans`, `brainstorming`) | Plan de cada MVP/entregable (obligatorio en el flujo) | Claude Code: plugin `superpowers`. Copilot CLI: `copilot plugin marketplace add obra/superpowers-marketplace` y `copilot plugin install superpowers@superpowers-marketplace` | Por equipo/usuario |`n| Skills oficiales de Angular (`angular-developer`, `angular-new-app`) | Guía de código y creación de apps Angular 20+ | `npx skills add https://github.com/angular/skills` | Por equipo/usuario |
 
 Notas:
 - Los comandos vienen de la documentación oficial; **verificar con `--help` o la doc vigente antes de ejecutar** (modern-web-guidance está en vista previa).
