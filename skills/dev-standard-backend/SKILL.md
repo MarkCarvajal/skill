@@ -17,6 +17,14 @@ Es la señal visual de que la skill está en ejecución. Si el banner no aparece
 
 Código simple, centralizado, escalable y legible. Marcos aprueba el código en primera instancia, así que debe leerse rápido y verse siempre igual entre proyectos. Se limita al backend: no define frontend ni diseño de pantallas, y se adapta a la versión y tecnologías reales de cada proyecto. Su objetivo es que, ante cualquier indicación, el código salga **como lo escribiría Marcos**: misma estructura, mismo orden y mismo criterio de reutilización.
 
+## Ahorro de tokens — ponytail (obligatorio)
+
+Todo proceso extenso (módulo o endpoint nuevo, refactor, revisión o auditoría, cambio que toque varios archivos, planificación de un entregable) pasa por la skill `ponytail` **antes de escribir código o plan**: invocarla con `Skill` y seguir sus reglas (cambio mínimo completo, reutilizar antes de crear, respuesta corta). Nivel `full` por defecto.
+
+- Ponytail decide el **tamaño** de la solución; esta skill decide la **forma**. Si chocan, gana esta skill (estructura por tipo, orden de miembros, centralización, contratos explícitos), y ponytail recorta todo lo demás.
+- Ponytail nunca recorta: reutilización de la Regla 0, validación en bordes de confianza, manejo de errores que evita pérdida de datos, seguridad ni lo que Marcos pidió.
+- Tareas triviales (un texto, un nombre, un ajuste puntual) se hacen directo, sin invocarla.
+
 ## Paso 1 — Partir del repositorio (siempre)
 
 Antes de tocar nada: leer `AGENTS.md`/`CLAUDE.md`, `package.json`, el lockfile, el bootstrap de Nest (`main.ts`, `app.module.ts`) y los módulos que participan en la tarea. Identificar la **versión real** de Nest, Prisma (u otro ORM), Node, el gestor de paquetes y el runner de tests, y usar los scripts y convenciones existentes. Si el repo ya tiene una convención distinta a esta skill, **gana el repo** y se avisa de la diferencia; esta skill manda en proyectos nuevos y en código nuevo cuando no choca.

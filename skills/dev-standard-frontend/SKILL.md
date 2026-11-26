@@ -17,6 +17,14 @@ Es la señal visual de que la skill está en ejecución. Si el banner no aparece
 
 Código simple, centralizado, escalable y legible. Marcos aprueba el código en primera instancia, así que debe leerse rápido y verse siempre igual entre proyectos. Se limita al frontend: no define backend, base de datos ni infraestructura, y se adapta a la versión y tecnologías reales de cada proyecto. Su objetivo es que, ante cualquier indicación, el código salga **como lo escribiría Marcos**: misma estructura, mismo orden y mismo criterio de reutilización.
 
+## Ahorro de tokens — ponytail (obligatorio)
+
+Todo proceso extenso (feature o pantalla nueva, refactor, revisión o auditoría, cambio que toque varios archivos, planificación de un entregable) pasa por la skill `ponytail` **antes de escribir código o plan**: invocarla con `Skill` y seguir sus reglas (cambio mínimo completo, reutilizar antes de crear, respuesta corta). Nivel `full` por defecto.
+
+- Ponytail decide el **tamaño** de la solución; esta skill decide la **forma**. Si chocan, gana esta skill (estructura, orden, centralización, responsive, contratos), y ponytail recorta todo lo demás.
+- Ponytail nunca recorta: reutilización de la Regla 0, responsive mobile-first, validaciones en bordes de confianza, accesibilidad ni lo que Marcos pidió.
+- Tareas triviales (un texto, un espaciado, un icono) se hacen directo, sin invocarla.
+
 ## Paso 1 — Partir del repositorio (siempre)
 
 Antes de tocar nada: leer `AGENTS.md`/`CLAUDE.md`, `package.json`, el lockfile, `angular.json` y las rutas que participan en la tarea. Identificar la **versión real** de Angular, el gestor de paquetes, el runner de tests y la librería visual, y usar los scripts y convenciones existentes. Si el repo ya tiene una convención distinta a esta skill, **gana el repo** y se avisa de la diferencia; esta skill manda en proyectos nuevos y en código nuevo cuando no choca.
